@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户信息</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav_footer.css" />
+		<script type="text/javascript" src="vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<script src="vendor/jquery.validate-1.13.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav_footer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#content {
+				max-width: 960px;
+				margin: 0 auto;
+			}
+
+			#content-img {
+				width: 100%;
+				height: 130px;
+			}
+
+			#but-release {
+				float: right;
+				width: 92px;
+				padding: 5px;
+				color: #fff;
+				background-color: #568BB9;
+				border: 1px solid #285e8e;
+				border-radius: 4px;
+				margin: 20px 10px 0 0;
+			}
+
+			#but-release:hover {
+				background-color: #437EB1;
+			}
+
+			#but-release:active {
+				background-color: #3071A9;
+			}
+
+			#but-release:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+
+			.nav-tabs {
+				padding: 20px 10px 0;
+			}
+
+			.moduel {
+				display: none;
+				padding: 40px 10px 10px;
+			}
+
+			#all-moduel {
+				display: block;
+			}
+
+			#new-hot {
+				float: right;
+				margin-top: -35px;
+			}
+
+			.btn-group:hover {}
+
+			.btn-group:active {}
+
+			.btn-group:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+
+			#new-hot .btn-primary {
+				color: #333;
+				background-color: #fff;
+				border-color: #ccc;
+				font-size: 12px;
+				padding: 5px 10px 5px;
+			}
+
+			#new-hot .btn-primary:hover {
+				color: #333;
+				background-color: #e6e6e6;
+				border-color: #adadad;
+			}
+
+			#new-hot .btn-primary:active:hover {
+				color: #333;
+				background-color: #e6e6e6;
+				border-color: #adadad;
+			}
+
+			#new-hot .active {
+				color: #333;
+				background-color: #e6e6e6;
+				border-color: #adadad;
+			}
+
+			#new-hot .active:hover{
+				color: #333;
+				background-color: #e6e6e6;
+				border-color: #adadad;
+			}
+
+			.page_num {
+				text-align: center;
+			}
+
+			#modal-act-title {
+				width: 99%;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			#modal-act-title:focus {
+				box-shadow: none;
+			}
+
+			#modal-act-content {
+				width: 99%;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			#ul-act {}
+
+			#ul-act li {
+				border-top: 1px solid #E5E5E5;
+				padding: 5px;
+			}
+
+			#ul-act li:first-child {
+				border-top: 0;
+			}
+
+			#ul-act p {
+				font-size: 12px;
+			}
+
+			a.title {
+				font-size: 18px;
+			}
+
+			#ul-act span {
+				margin: 0 5px;
+			}
+
+			span.vertical-line {
+				display: inline-block;
+				margin: 0 10px;
+				font-size: 15px;
+			}
+
+			#ul-act p.act-content {
+				font-size: 16px;
+				display: -webkit-box !important;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-break: break-all;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+			}
+
+			p.viewed {}
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+					<a class="navbar-brand" href="#">
+						<img alt="LOGO" src="#">
+					</a>
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">进入邀约</a>
+						</li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="寻找邀约">
+								</div>
+								<button type="submit" class="btn btn-default">查找</button>
+							</form>
+						</li>
+						<li id="li-login">
+							<a href="#" id="nav-login">
+								登录/注册
+							</a>
+						</li>
+						<!--<li id="li-userName">
+							<a id="userName" title="进入个人空间">你好，小明</a>
+						</li>
+						<li id="cancel">
+							<a>注销</a>
+						</li>-->
+
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div id="content">
+
+			<img id="content-img" src="img/1 (74).jpg" />
+			<button id="but-release">发布活动</button>
+			<ul class="nav nav-tabs" role="tablist">
+
+				<li role="presentation" class="active">
+					<a href="#all-moduel">全部板块</a>
+				</li>
+				<li role="presentation">
+					<a href="#module1">模块1</a>
+				</li>
+				<li role="presentation">
+					<a href="#module2">模块2</a>
+				</li>
+				<li role="presentation">
+					<a href="#module3">模块3</a>
+				</li>
+			</ul>
+			<div class="moduel" id="all-moduel">
+				<div class="btn-group" data-toggle="buttons" id="new-hot">
+					<label class="btn btn-primary active" id="new">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新
+  </label>
+					<label class="btn btn-primary" id="hot">
+    <input type="radio" name="options" id="option2" autocomplete="off"> 最热
+  </label>
+				</div>
+				<ul id="ul-act">
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="moduel" id="module1">
+				<div class="btn-group" data-toggle="buttons" id="new-hot">
+					<label class="btn btn-primary active" id="new">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新
+  </label>
+					<label class="btn btn-primary" id="hot">
+    <input type="radio" name="options" id="option2" autocomplete="off"> 最热
+  </label>
+				</div>
+				<ul id="ul-act">
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+
+				</ul>
+			</div>
+			<div class="moduel" id="module2">
+				<div class="btn-group" data-toggle="buttons" id="new-hot">
+					<label class="btn btn-primary active" id="new">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新
+  </label>
+					<label class="btn btn-primary" id="hot">
+    <input type="radio" name="options" id="option2" autocomplete="off"> 最热
+  </label>
+				</div>
+				<ul id="ul-act">
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="moduel" id="module3">
+				<div class="btn-group" data-toggle="buttons" id="new-hot">
+					<label class="btn btn-primary active" id="new">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新
+  </label>
+					<label class="btn btn-primary" id="hot">
+    <input type="radio" name="options" id="option2" autocomplete="off"> 最热
+  </label>
+				</div>
+				<ul id="ul-act">
+					<li>
+						<h5><a href="#" class="title">活动名称</a></h5>
+						<p>发布者:<span>小米</span><span class="vertical-line">|</span>发布时间:<span>2016-1-1</span></p>
+						<p class="act-content">活动内容</p>
+						<p class="viewed">浏览次数:<span>100</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="page_num">
+				<ul class="pagination">
+					<li>
+						<a href="#">&laquo;</a>
+					</li>
+					<li class="active">
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#">4</a>
+					</li>
+					<li>
+						<a href="#">5</a>
+					</li>
+					<li>
+						<a href="#">&raquo;</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<footer>
+			<p></p>
+			联系方式</p>
+			<p>
+				QQ/微信：352329872</p>
+			<p>
+				邮箱：helloyoucan@163.com</p>
+			<p>
+				版权所有&#169;广州商学院14级商软1班终极小组-2016
+			</p>
+		</footer>
+		<!--发布活动-->
+		<div class="modal fade" id="release-myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">发布活动</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" method="post">
+							<input type="text" id="modal-act-title" placeholder="活动名称" />
+							<br />
+							<textarea name="modal-act-content" id="modal-act-content" rows="5"></textarea>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" id="modal-but-release">发布</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+		<!-- Modal登录 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div id="div-login-sign">
+
+							<ul id="ul-tap">
+								<li class="active">登录</li>
+								<li>注册</li>
+							</ul>
+							<div id="all-tap">
+								<div id="tap-login">
+									<form action="#" method="post" id="login-from">
+										<input type="text" placeholder="邮箱" id="login-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="login-password" name="password" />
+										<p></p>
+										<input type="submit" value="登录 " />
+										<p id="login-failed">登录失败</p>
+									</form>
+								</div>
+								<div id="tap-sign_in">
+									<form action="#" method="post" id="sign-form">
+										<input type="text" placeholder="昵称(不超过8个字符长度)" id="sign-name" name="username" />
+										<p></p>
+										<input type="text" placeholder="邮箱" id="sign-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="sign-password" name="password" />
+										<p></p>
+										<input type="submit" value="注册 " />
+										<p id="sign-success">注册成功!请进行登录</p>
+										<p id="sign-failed">注册失败!请重新注册</p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			/*发布活动*/
+			$("#but-release").click(function() {
+				$('#release-myModal').modal('show');
+			});
+			/*发布*/
+			$("#modal-but-release").click(function() {
+				var title = $("#act-title").val();
+				var text = $("#act-content").val();
+				window.location.reload(); /*发布后刷新*/
+			});
+			/*标签*/
+			$('.nav-tabs a').click(function(e) {
+				e.preventDefault()
+				$(this).tab('show');
+				var id = $(this).attr("href");
+				$(".moduel").hide();
+				$(id).show();
+			});
+			//设置内容区域最小高度
+			var winHeight;
+			setContentHig();
+			$(window).resize(function() {
+				setContentHig();
+			});
+
+			function setContentHig() {
+				if(window.innerHeight)
+					winHeight = window.innerHeight;
+				else if((document.body) && (document.body.clientHeight))
+					winHeight = document.body.clientHeight;
+				winHeight = winHeight > 600 ? winHeight : 600;
+				$("#content").css({
+					"min-height": winHeight - 72 - 120
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>广商邀约</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav_footer.css" />
+		<script type="text/javascript" src="vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<script src="vendor/jquery.validate-1.13.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav_footer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.row {
+				padding-top: 50px;
+			}
+			
+			@media (min-width: 992px) {
+				.row {
+					max-width: 1424px;
+					margin: 0 auto;
+				}
+			}
+			
+			.col-md-4 {
+				padding: 50px;
+			}
+			
+			@media (min-width: 768px) {
+				.col-sm-6 {
+					width: 33.3%;
+				}
+			}
+			
+			.thumbnail {
+				border: 0;
+			}
+			
+			.thumbnail> img {
+				width: 100%;
+			}
+			
+			.carousel-inner> .item> img {
+				width: 100%;
+			}
+			
+			#go {
+				width: 100%;
+				padding: 30px 0 40px;
+				text-align: center;
+			}
+			
+			#go a {
+				text-decoration: none;
+				background-color: #FF4522;
+				color: white;
+				padding: 5px 15px;
+				border: 0;
+				font-size: 25px;
+				border-radius: 4px;
+			}
+			
+			#go a:link {}
+			
+			#go a:visited {}
+			
+			#go a:hover {
+				background-color: #E83F1F;
+			}
+			
+			#go a:active {
+				background-color: #B93219;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+					<a class="navbar-brand" href="#">
+						<img alt="LOGO" src="#">
+					</a>
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">进入邀约</a>
+						</li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="寻找邀约">
+								</div>
+								<button type="submit" class="btn btn-default">查找</button>
+							</form>
+						</li>
+						<li id="li-login">
+							<a href="#" id="nav-login">
+								登录/注册
+							</a>
+						</li>
+						<!--<li id="li-userName">
+							<a id="userName" title="进入个人空间">你好，小明</a>
+						</li>
+						<li id="cancel">
+							<a>注销</a>
+						</li>
+						-->
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="img/1 (101).jpg" alt="...">
+					<div class="carousel-caption">
+						文字1
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/1 (64).jpg" alt="...">
+					<div class="carousel-caption">
+						文字2
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/1 (68).jpg" alt="...">
+					<div class="carousel-caption">
+						文字3
+					</div>
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="img/1 (68).jpg" alt="...">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni excepturi ea suscipit corporis aliquid doloribus accusantium possimus voluptatum obcaecati necessitatibus minima fugiat similique. Officiis aspernatur sit eum quibusdam et culpa.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="img/1 (68).jpg" alt="...">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni excepturi ea suscipit corporis aliquid doloribus accusantium possimus voluptatum obcaecati necessitatibus minima fugiat similique. Officiis aspernatur sit eum quibusdam et culpa.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="img/1 (68).jpg" alt="...">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni excepturi ea suscipit corporis aliquid doloribus accusantium possimus voluptatum obcaecati necessitatibus minima fugiat similique. Officiis aspernatur sit eum quibusdam et culpa.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="go">
+			<a href="javascript:void(0)">进入邀约</a>
+		</div>
+		<footer>
+			<p></p>
+			联系方式</p>
+			<p>
+				QQ/微信：352329872</p>
+			<p>
+				邮箱：helloyoucan@163.com</p>
+			<p>
+				版权所有&#169;广州商学院14级商软1班终极小组-2016
+			</p>
+		</footer>
+
+		<!-- Modal登录 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div id="div-login-sign">
+
+							<ul id="ul-tap">
+								<li class="active">登录</li>
+								<li>注册</li>
+							</ul>
+							<div id="all-tap">
+								<div id="tap-login">
+									<form action="#" method="post" id="login-from">
+										<input type="text" placeholder="邮箱" id="login-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="login-password" name="password" />
+										<p></p>
+										<input type="submit" value="登录 " />
+										<p id="login-failed">登录失败</p>
+									</form>
+								</div>
+								<div id="tap-sign_in">
+									<form action="#" method="post" id="sign-form">
+										<input type="text" placeholder="昵称(不超过8个字符长度)" id="sign-name" name="username" />
+										<p></p>
+										<input type="text" placeholder="邮箱" id="sign-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="sign-password" name="password" />
+										<p></p>
+										<input type="submit" value="注册 " />
+										<p id="sign-success">注册成功!请进行登录</p>
+										<p id="sign-failed">注册失败!请重新注册</p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript ">
+			var winHeight;
+			setRoundImgHig();
+			$(window).resize(function() {
+				setRoundImgHig();
+
+			});
+			//设置图片轮播高度为浏览器窗口高度-nav高度
+			function setRoundImgHig() {
+				if(window.innerHeight)
+					winHeight = window.innerHeight;
+				else if((document.body) && (document.body.clientHeight))
+					winHeight = document.body.clientHeight;
+				winHeight = winHeight > 600 ? winHeight : 600;
+
+				$(".item img").css({
+					"max-height": winHeight - 72
+				});
+			}
+		</script>
+	</body>
+
+</html>

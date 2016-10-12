@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户信息</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav_footer.css" />
+		<script type="text/javascript" src="vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<script src="vendor/jquery.validate-1.13.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav_footer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#content {
+				max-width: 960px;
+				margin: 0 auto;
+			}
+			
+			#content span {
+				margin: 0 5px;
+			}
+			
+			#but-comeback {
+				float: right;
+				width: 60px;
+				padding: 2px;
+				color: #fff;
+				background-color: #D35652;
+				border: 1px solid #ac2925;
+				border-radius: 4px;
+			}
+			
+			#but-comeback:hover {
+				background-color: #CE433F;
+			}
+			
+			#but-comeback:active {
+				background-color: #C9302C;
+			}
+			
+			#but-comeback:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			#personal_details {
+				padding: 0 20px 20px;
+			}
+			
+			.nav-tabs li:first-child {
+				margin-left: 20px;
+			}
+			
+			#myrelease,
+			#collection {
+				min-height: 100px;
+				padding: 20px;
+			}
+			
+			#collection {
+				display: none;
+			}
+			
+			#myrelease li,
+			#collection li {
+				border-top: 1px solid #E3E3E3;
+			}
+			
+			#myrelease li:first-child,
+			#collection li:first-child {
+				border-top: 0;
+			}
+			
+			.activity_itle {
+				/*单行文本溢出*/
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			
+			.active_content {
+				/*多行文本溢出*/
+				display: -webkit-box !important;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-break: break-all;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+			}
+			
+			.release_time {
+				font-size: 12px;
+			}
+			
+			.page_num {
+				text-align: center;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+					<a class="navbar-brand" href="#">
+						<img alt="LOGO" src="#">
+					</a>
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">进入邀约</a>
+						</li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="寻找邀约">
+								</div>
+								<button type="submit" class="btn btn-default">查找</button>
+							</form>
+						</li>
+						<li id="li-login">
+							<a href="#" id="nav-login">
+								登录/注册
+							</a>
+						</li>
+						<!--<li id="li-userName">
+							<a id="userName" title="进入个人空间">你好，小明</a>
+						</li>
+						<li id="cancel">
+							<a>注销</a>
+						</li>-->
+
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div id="content">
+			<button id="but-comeback">返回</button>
+			<h2>个人资料</h2>
+			<div id="personal_details">
+				<p>昵称 :<span>小米</span></p>
+				<p>邮箱:<span>14d56sa15@qq.com</span></p>
+			</div>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#myrelease">发布的活动</a>
+				</li>
+				<li role="presentation">
+					<a href="#collection">收藏的活动</a>
+				</li>
+			</ul>
+			<div id="myrelease">
+				<ul>
+					<li>
+						<h4><a href="#" class="activity_itle">活动名称</a></h4>
+						<p class="active_content">活动内容摘取</p>
+						<p class="release_time">发布时间:<span>2016-11-11</span></p>
+					</li>
+					<li>
+						<h4><a href="#" class="activity_itle">活动名称</a></h4>
+						<p class="active_content">活动内容摘取</p>
+						<p class="release_time">发布时间:<span>2016-11-11</span></p>
+					</li>
+					<li>
+						<h4><a href="#" class="activity_itle">活动名称</a></h4>
+						<p class="active_content">活动内容摘取</p>
+						<p class="release_time">发布时间:<span>2016-11-11</span></p>
+					</li>
+
+				</ul>
+				<div class="page_num">
+					<ul class="pagination">
+						<li>
+							<a href="#">&laquo;</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">&raquo;</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="collection">
+				<ul>
+					<li>
+						<h4><a href="#" class="activity_itle">活动名称2222222</a></h4>
+						<p class="active_content">活动内容</p>
+						<p class="release_time">发布时间:<span>2016-11-11</span></p>
+					</li>
+				</ul>
+				<div class="page_num">
+					<ul class="pagination">
+						<li>
+							<a href="#">&laquo;</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">&raquo;</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<footer>
+			<p></p>
+			联系方式</p>
+			<p>
+				QQ/微信：352329872</p>
+			<p>
+				邮箱：helloyoucan@163.com</p>
+			<p>
+				版权所有&#169;广州商学院14级商软1班终极小组-2016
+			</p>
+		</footer>
+		<!-- Modal登录 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div id="div-login-sign">
+
+							<ul id="ul-tap">
+								<li class="active">登录</li>
+								<li>注册</li>
+							</ul>
+							<div id="all-tap">
+								<div id="tap-login">
+									<form action="#" method="post" id="login-from">
+										<input type="text" placeholder="邮箱" id="login-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="login-password" name="password" />
+										<p></p>
+										<input type="submit" value="登录 " />
+										<p id="login-failed">登录失败</p>
+									</form>
+								</div>
+								<div id="tap-sign_in">
+									<form action="#" method="post" id="sign-form">
+										<input type="text" placeholder="昵称(不超过8个字符长度)" id="sign-name" name="username" />
+										<p></p>
+										<input type="text" placeholder="邮箱" id="sign-email" name="email" />
+										<p></p>
+										<input type="password" placeholder="密码(6~18位，必须为字母与数字组合)" id="sign-password" name="password" />
+										<p></p>
+										<input type="submit" value="注册 " />
+										<p id="sign-success">注册成功!请进行登录</p>
+										<p id="sign-failed">注册失败!请重新注册</p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			/*返回上一页*/
+			$("#but-comeback").click(function() {
+				history.back(-1);
+			});
+			/*标签*/
+			$('.nav-tabs a').click(function(e) {
+				e.preventDefault()
+				$(this).tab('show');
+				$("#myrelease").toggle();
+				$("#collection").toggle();
+			});
+			//设置内容区域最小高度
+			var winHeight;
+			setContentHig();
+			$(window).resize(function() {
+				setContentHig();
+			});
+
+			function setContentHig() {
+				if(window.innerHeight)
+					winHeight = window.innerHeight;
+				else if((document.body) && (document.body.clientHeight))
+					winHeight = document.body.clientHeight;
+				winHeight = winHeight > 600 ? winHeight : 600;
+				$("#content").css({
+					"min-height": winHeight - 72 - 120
+				});
+			}
+		</script>
+	</body>
+
+</html>
