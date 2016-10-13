@@ -101,7 +101,7 @@
 				border-color: #adadad;
 			}
 
-			#new-hot .active:hover{
+			#new-hot .active:hover {
 				color: #333;
 				background-color: #e6e6e6;
 				border-color: #adadad;
@@ -112,9 +112,9 @@
 			}
 
 			#modal-act-title {
-				width: 99%;
+				width: 100%;
 				padding: 5px;
-				margin: 5px;
+				margin: 5px 0;
 			}
 
 			#modal-act-title:focus {
@@ -122,9 +122,9 @@
 			}
 
 			#modal-act-content {
-				width: 99%;
+				width: 100%;
 				padding: 5px;
-				margin: 5px;
+				margin: 5px 0;
 			}
 
 			#ul-act {}
@@ -381,7 +381,7 @@
 		</div>
 		<footer>
 			<p>
-			联系方式</p>
+				联系方式</p>
 			<p>
 				QQ/微信：352329872</p>
 			<p>
@@ -400,6 +400,16 @@
 					</div>
 					<div class="modal-body">
 						<form action="" method="post">
+							活动类型:
+							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox1" value="option1"> 类型1
+							</label>
+							<label class="checkbox-inline">
+ 								 <input type="checkbox" id="inlineCheckbox2" value="option2"> 类型2
+							</label>
+							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox3" value="option3"> 类型3
+							</label>
 							<input type="text" id="modal-act-title" placeholder="活动名称" />
 							<br />
 							<textarea name="modal-act-content" id="modal-act-content" rows="5"></textarea>
@@ -462,6 +472,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			$('#release-myModal').modal('show'); /**********/
 			/*发布活动*/
 			$("#but-release").click(function() {
 				$('#release-myModal').modal('show');
